@@ -4,13 +4,8 @@ import { UsersPageComponent } from './users-page.component';
 
 const routes: Routes = [
   {
-    path: 'users',
-    component: UsersPageComponent,
-  },
-  {
     path: '',
-    redirectTo: 'users',
-    pathMatch: 'full'
+    component: UsersPageComponent,
   },
 ];
 
