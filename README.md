@@ -1,7 +1,23 @@
 
 In response to the recent launch of Angular 17, I undertook the challenge of adapting to the revamped framework and completed an assignment using innovative coding techniques. Despite being unfamiliar with Angular 17, I embraced the opportunity to explore its new features and enhance my coding skills. Through perseverance and adaptability, I successfully delivered the assignment using a fresh approach to Angular development.
 
+## Installation Steps:
 
+1. Clone the Repository:
+Clone the provided repository to your local machine using your preferred Git client or the following command:  git clone <repository_url>
+
+2. Install Dependencies:
+Navigate to the cloned repository directory and install the required modules and dependencies using npm (Node Package Manager):npm install
+
+3. Start JSON Server:
+Run the following command to start the JSON server, which serves as a mock backend for the application: npx json-server db.json
+
+4. Temporarily Disable CORS in Chrome (Optional, for Local Testing):
+For local testing purposes, you may choose to temporarily disable CORS in the Chrome browser. Refer to the documentation below or online resources for instructions on how to disable CORS in your Chrome browser instance.
+
+5 Start the Application:
+Launch the Angular application by running the following command in the project directory: ng serve
+This command compiles the application and starts a development server. Once the compilation is complete, you can access the application by navigating to http://localhost:4200 in your web browser.
 
 ## Development server
 
