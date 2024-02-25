@@ -44,17 +44,17 @@ export class UserUpcertComponent {
     this.userId = this.activeRoute.snapshot.paramMap.get('userId');
     console.log("UserId ", this.userId);
 
-    if (this.userId ) {
+    if (this.userId !== 'create' ) {
       this.editMode = true;
       this.getUserById(this.userId);
     }
   }
 
   onSubmit() {
-    if ( this.userForm.valid && this.userId === '') {
+    if ( this.userForm.valid && this.userId === 'create') {
       console.log("Form Value", this.userForm.value);
       this.createUser(this.userForm.value);
-    } else if( this.userId !== ''){
+    } else{
       this.updateUser(this.userForm.value)
     }
   }

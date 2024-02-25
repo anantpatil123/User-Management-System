@@ -25,3 +25,9 @@
     display: flex;
     margin:20px
   }
+
+ ::ng-deep .p-button.p-button-text {
+    background-color: transparent;
+    color: #313131;
+    border-color: #f3e5e5;
+}

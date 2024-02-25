@@ -1,6 +1,6 @@
 <div class="page-container">
   <div class="form-container">
-    <div class="header">{{ userId ?'Update User'  : 'Create User' }}
+    <div class="header">{{ userId=='create' ?'Create User'  : 'Update User' }}
        </div>
     <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
       <div class="form-field">
@@ -24,7 +24,7 @@
         <div> <input type="number" pInputText class="p-inputtext-lg" id="phoneNumber" formControlName="phoneNumber" />
         </div>
       </div>
-        <p-button [disabled]="!userForm.valid" label=""  [rounded]="true" type="submit">Submit</p-button>
+        <p-button [disabled]="!userForm.valid" label=""  [rounded]="true" type="submit">{{ userId=='create' ?'Create '  : 'Update ' }}</p-button>
     </form>
   </div>
   <div class="card flex justify-content-center">
