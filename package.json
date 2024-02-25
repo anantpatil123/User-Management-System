@@ -19,6 +19,7 @@
     "@angular/platform-browser": "^17.0.0",
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/router": "^17.0.0",
+    "@fortawesome/angular-fontawesome": "^0.14.1",
     "@ionic/angular": "^7.7.3",
     "primeng": "^17.8.0",
     "rxjs": "~7.8.0",

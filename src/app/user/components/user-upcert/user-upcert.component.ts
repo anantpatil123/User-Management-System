@@ -3,7 +3,7 @@ import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, 
 import { UserService } from '../../../services/user.service';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
-import { RouterOutlet } from '@angular/router';
+import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { User } from '../../../interfaces/user';
 
@@ -17,11 +17,13 @@ import { User } from '../../../interfaces/user';
   styleUrls: ['./user-upcert.component.scss']
 })
 export class UserUpcertComponent {
+  [x: string]: any;
   userForm: FormGroup;
   @Input() userId: any;
   editMode: boolean = false;
   constructor(public fb: FormBuilder,
-    private userService: UserService
+    private userService: UserService,
+    private activeRoute: ActivatedRoute
   ) {
     this.userForm = this.fb.group({
       'firstName': new FormControl(  null , [Validators.required, Validators.minLength(3), Validators.pattern('^[_A-z0-9]*((-|\s)*[_A-z0-9])*$')]),
@@ -34,20 +36,24 @@ export class UserUpcertComponent {
   }
 
   ngOnInit() {
-    // if (this.userId) {
-    //   this.editMode = true;
-    //   this.userService.getUserById(this.userId).subscribe((user) => {
-    //     this.userForm.patchValue(user);
-    //   });
-    // }
+
+    this.userId = this.activeRoute.snapshot.paramMap.get('userId');
+    if (this.userId) {
+      this.editMode = true;
+      console.log("UserId ",this.userId);
+      this.getUserById(this.userId);
+    }
   }
 
   onSubmit() {
-  if(this.userForm.valid)
+  if(this.userForm.valid || this.userId == null){
     console.log("Form Value", this.userForm.value);
-this.createUser(this.userForm.value)
+       this.createUser(this.userForm.value);
+  }else  {
+    this.updateUser(this.userForm.value)
     
   }
+}
 
 
   createUser(formValue:User) {
@@ -55,20 +61,26 @@ this.createUser(this.userForm.value)
       const user = formValue;
       this.userService.createUser(user).subscribe((res:any) => {
         console.log("Created User ",res);
-        
       }, (error: any) => {
         console.log("Error", error);
       });
     }
   }
 
-  // updateUser() {
-  //   if (this.userForm.valid) {
-  //     const user = this.userForm.value;
-  //     this.userService.updateUser(this.userId, user).subscribe(() => {
-  //     }, (error: any) => {
-  //       console.log("Error", error);
-  //     });
-  //   }
-  // }
+  updateUser(formValue:User) {
+    if (this.userForm.valid) {
+      const user = formValue;
+      this.userService.updateUser(this.userId, user).subscribe(() => {
+      }, (error: any) => {
+        console.log("Error", error);
+      });
+    }
+  }
+
+  getUserById(userId:any){
+this.userService.getUserById(userId).subscribe((res:any)=>{
+  this.userForm.patchValue(res);
+})
+  }
+
 }

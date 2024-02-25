@@ -1,20 +1,28 @@
 {
-    "users": [
-       {
-        "id":"1",
-        "firstName": "Anant",
-        "lastName": "Patil",
-        "email": "ant41107@gmail.com",
-        "phoneNumber": 7020327030,
-        "address": "Baner,Pune 411045"
-    } ,
+  "users": [
     {
-        "id":"2",
-        "firstName": "Anant",
-        "lastName": "Patil",
-        "email": "ant41107@gmail.com",
-        "phoneNumber": 7020327030,
-        "address": "Baner,Pune 411045"
-    } 
-    ]
-  }
+      "id": "1",
+      "firstName": "Anant",
+      "lastName": "Patil",
+      "email": "ant41107@gmail.com",
+      "phoneNumber": 7020327030,
+      "address": "Baner,Pune 411045"
+    },
+    {
+      "id": "2",
+      "firstName": "Anant",
+      "lastName": "Patil",
+      "email": "ant41107@gmail.com",
+      "phoneNumber": 7020327030,
+      "address": "Baner,Pune 411045"
+    },
+    {
+      "id": "c5fb",
+      "firstName": "Amit",
+      "lastName": "Patil",
+      "address": "Satara",
+      "email": "amit@gmail.com",
+      "phoneNumber": 7878787878
+    }
+  ]
+}

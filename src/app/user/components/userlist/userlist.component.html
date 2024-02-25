@@ -1,14 +1,18 @@
+
+<div class="header"> User List</div>
+
 <div class="grid-container">
   @for(user of userList ;; track user.id){
     <div  class="grid-item">
-      <h3>{{ user.firstName }}</h3>
-      <h3>{{ user.lastName }}</h3>
-      <h3>{{ user.email
-       }}</h3>
-       <h3>{{ user.address
-      }}</h3>
-             <h3>{{ user.phoneNumber
-            }}</h3>
+      <h3>{{ user.firstName }}  {{ user.lastName }}</h3>
+      <h3> <span class="icon-container"> <i class="fa-solid fa-envelope"></i></span>{{ user.email }}</h3>
+      <h3> <span class="icon-container"><i class="fa-solid fa-location-dot"></i> </span>{{ user.address}}</h3>
+      <h3> <span class="icon-container"><i class="fa-solid fa-phone"></i></span>   {{ user.phoneNumber}}</h3>
+       <div class="btn-container"> 
+       <!-- (click)="deleteUser(user.id)" -->
+        <p-button  [rounded]="true" [text]="true" > <i class="fa-solid fa-trash" ></i></p-button>
+        <p-button  [rounded]="true" [text]="true"  routerLink="/user-upcert/{{user.id}}"><i class="fa-solid fa-pen" > </i></p-button>
+      </div>
     </div>
   }@empty{
     Empty list of users

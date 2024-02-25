@@ -9,9 +9,10 @@ export const routes: Routes = [
     { path: '', redirectTo:'users',pathMatch:'full' },
        { path: 'users',component: UsersPageComponent,  children: [
           { path: '', component: UsersPageComponent },
-          { path: 'user-upcert', component: UserUpcertComponent },
+         
         ],
       },
+      { path: 'user-upcert/:userId', component: UserUpcertComponent },
       { path: 'users/user-list', component: UserlistComponent },
       {
         path: '',component:UsersPageComponent

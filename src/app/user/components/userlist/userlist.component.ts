@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterEvent, RouterLink, RouterOutlet } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { UserService } from '../../../services/user.service';
@@ -12,7 +12,7 @@ import { User } from '../../../interfaces/user';
   styleUrls: ['./userlist.component.scss'],
   standalone: true,
   imports: [InputTextModule,
-    ButtonModule, RouterOutlet, HttpClientModule
+    ButtonModule, RouterOutlet, HttpClientModule,RouterLink
   ]
 })
 export class UserlistComponent {
@@ -29,11 +29,20 @@ export class UserlistComponent {
   ngOnInit() {
     this.getUserList();
   }
+
+
   getUserList() {
     this.userService.getUsers().subscribe((res: any) => {
-      this.userList = res.users;
+      this.userList = res;
       console.log("userList",this.userList);
       
     })
   }
+
+  // deleteUser(userId:number){
+  //   this.userService.deleteUser(userId).subscribe((res: any) => {
+  //     this.userList = res.users;
+  //     console.log("userList",this.userList);
+      
+  //   })  }
 }
