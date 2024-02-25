@@ -1,3 +1,8 @@
+
+In response to the recent launch of Angular 17, I undertook the challenge of adapting to the revamped framework and completed an assignment using innovative coding techniques. Despite being unfamiliar with Angular 17, I embraced the opportunity to explore its new features and enhance my coding skills. Through perseverance and adaptability, I successfully delivered the assignment using a fresh approach to Angular development.
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
