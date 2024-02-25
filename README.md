@@ -1,15 +1,3 @@
-
-
-For testing locally I used chrome browser and disabled cors (security )  
-You can refer https://alfilatov.com/posts/run-chrome-without-cors/ 
-Below Command is used from cmd to use temp broser to test code locally [It is not recommended for Production environment ]
-
-C:\Program Files\Google\Chrome\Application\chrome.exe --disable-web-security --disable-gpu --user-data-dir=%LOCALAPPDATA%\Google\chromeTemp
-
-# UserManagementSystem
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
@@ -33,6 +21,49 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Temporarily Disabling CORS in Chrome for Local Testing
+
+To document the process of temporarily disabling CORS in the Chrome browser for local testing purposes, you can provide the following steps in your project documentation:
+
+Temporarily Disabling CORS in Chrome for Local Testing
+When developing and testing web applications locally, you might encounter Cross-Origin Resource Sharing (CORS) restrictions, which can prevent your frontend application from making requests to a different origin (domain) than the one serving the web page. While CORS is a crucial security feature, it can sometimes hinder development and testing workflows.
+
+For local testing purposes only, you can temporarily disable CORS restrictions in the Chrome browser by launching it with specific command-line flags.
+
+Warning: Not Recommended for Production Environment
+Disabling CORS is a security risk and should only be done for local development and testing. Never disable CORS in a production environment, as it exposes your application to potential security vulnerabilities.
+
+Steps to Temporarily Disable CORS in Chrome:
+Close All Instances of Chrome:
+Ensure that all instances of the Chrome browser are closed before proceeding.
+
+Open Command Prompt (Windows) or Terminal (macOS/Linux):
+Launch the command-line interface on your operating system.
+
+Run Chrome with Disabled CORS:
+Enter the following command in the command-line interface to open Chrome with CORS disabled:
+
+chrome.exe --disable-web-security --user-data-dir="C:/temp_chrome_user_data_dir"
+Replace "C:/temp_chrome_user_data_dir" with the desired directory path where Chrome should store its temporary user data. This step ensures that Chrome starts with a clean profile, separate from your regular browsing session.
+
+Test Your Web Application:
+With the CORS restrictions disabled, you can now test your web application locally in Chrome without encountering CORS-related errors.
+
+Important Notes:
+Security Implications: Disabling CORS removes an important security barrier and exposes your browser to potential security risks. Only use this approach for local development and testing purposes.
+
+Use Incognito Mode (Optional): You can further isolate your testing environment by using Chrome's Incognito mode (Ctrl + Shift + N or Cmd + Shift + N) alongside CORS disabled mode. Incognito mode provides additional privacy and security by not saving browsing history or cookies.
+
+Re-enable CORS After Testing: Once you've completed your testing, close the Chrome browser instance with CORS disabled, and restart Chrome normally for regular browsing. Do not leave CORS disabled unnecessarily.
+
+References:
+Alfilatov Blog Post: Run Chrome Without CORS
+
+# UserManagementSystem
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+
 
 ## Problem Statment  
 
@@ -64,7 +95,7 @@ Create a User Page Component With module and routing
 Create a User List Component With module and routing
 Create a User-Upsert Component With module and routing
 Create a user interface
-create json-Server Functionality for local API management.
+Create JSON-Server Functionality for local API management.
 Work on User-Upsert Component functionalities 1. Create a Reactive Form for creating and updating the user. 2. Create functionalities and API request methods for creating and updating the user.
 User List Component UI work and redirection to upsert component.
 UI enhancement
