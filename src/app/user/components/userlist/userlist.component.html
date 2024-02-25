@@ -1,0 +1,16 @@
+<div class="grid-container">
+  @for(user of userList ;; track user.id){
+    <div  class="grid-item">
+      <h3>{{ user.firstName }}</h3>
+      <h3>{{ user.lastName }}</h3>
+      <h3>{{ user.email
+       }}</h3>
+       <h3>{{ user.address
+      }}</h3>
+             <h3>{{ user.phoneNumber
+            }}</h3>
+    </div>
+  }@empty{
+    Empty list of users
+ }
+   </div>

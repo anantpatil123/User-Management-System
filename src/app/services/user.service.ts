@@ -21,4 +21,9 @@ export class UserService {
   getUserById(userId:number){
     return this.http.post<User>('localhost:3000/users',userId)
   }
+  getUsers(){
+    // return this.http.get<User>('localhost:3000/users')
+        return this.http.get<User>('./assets/database.json')
+
+  }
 }

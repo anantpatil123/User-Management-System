@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { UsersPageComponent } from './user/pages/users-page/users-page.component';
 import { UserUpcertComponent } from './user/components/user-upcert/user-upcert.component';
+import { UserlistComponent } from './user/components/userlist/userlist.component';
 
 export const routes: Routes = [
 
@@ -11,6 +12,7 @@ export const routes: Routes = [
           { path: 'user-upcert', component: UserUpcertComponent },
         ],
       },
+      { path: 'users/user-list', component: UserlistComponent },
       {
         path: '',component:UsersPageComponent
       },
