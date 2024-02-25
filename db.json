@@ -1,28 +1,52 @@
 {
   "users": [
     {
-      "id": "1",
       "firstName": "Anant",
       "lastName": "Patil",
+      "address": "Baner,Pune 411045",
       "email": "ant41107@gmail.com",
       "phoneNumber": 7020327030,
-      "address": "Baner,Pune 411045"
+      "id": "1"
     },
     {
-      "id": "2",
-      "firstName": "Anant",
+      "firstName": "Amrendra",
       "lastName": "Patil",
-      "email": "ant41107@gmail.com",
-      "phoneNumber": 7020327030,
-      "address": "Baner,Pune 411045"
+      "address": "Sangl",
+      "email": "amit@gmail.com",
+      "phoneNumber": 7878787878,
+      "id": "6595"
     },
     {
-      "id": "c5fb",
+      "firstName": "Amrendra",
+      "lastName": "Patil",
+      "address": "Pune",
+      "email": "amit@gmail.com",
+      "phoneNumber": 6523698562,
+      "id": "7e23"
+    },
+    {
+      "id": "0768",
       "firstName": "Amit",
       "lastName": "Patil",
+      "address": "Kolhapur",
+      "email": "amit@gmail.com",
+      "phoneNumber": 6589546256
+    },
+    {
+      "id": "94e6",
+      "firstName": "Amit",
+      "lastName": "c",
       "address": "Satara",
       "email": "amit@gmail.com",
-      "phoneNumber": 7878787878
+      "phoneNumber": 6589478569
+    },
+    {
+      "firstName": "Amit",
+      "lastName": "c",
+      "address": "Sataraa",
+      "email": "amit@gmail.com",
+      "phoneNumber": 6589478564,
+      "id": "9465"
     }
   ]
 }

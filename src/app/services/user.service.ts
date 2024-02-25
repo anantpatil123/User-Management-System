@@ -9,32 +9,26 @@ import { Observable } from 'rxjs';
 
 export class UserService {
 
-  constructor( private http:  HttpClient ) { }
+  constructor(private http: HttpClient) { }
 
 
-  createUser(userData:User){
-   return this.http.post<User>('http://localhost:3000/users',userData);
+  createUser(userData: User) {
+    return this.http.post<User>('http://localhost:3000/users', userData);
   }
 
-  updateUser(userId:number,userData:User){
-  return  this.http.post<User>('localhost:3000/users',userData)
+  updateUser(userId: number, userData: User) {
+    return this.http.put<User>(`http://localhost:3000/users/${userId}`, userData)
   }
 
-  getUserById (userId:number){
+  getUserById(userId: number) {
     return this.http.get<User>(`http://localhost:3000/users/${userId}`);
   }
 
-  getUsers() :Observable<User>{
-
-    // const headers = new HttpHeaders({
-    //   'Content-Type': 'application/json'
-    // });
+  getUsers(): Observable<User> {
     return this.http.get<User>('http://localhost:3000/users')
-        // return this.http.get<User>('./assets/database.json')
-
   }
 
-  deleteUser(userId:number){
-// return this.http.delete<User>(`./assets/database.json/users/${userId}`)
+  deleteUser(userId: number): Observable<User> {
+    return this.http.delete<User>(`http://localhost:3000/users/${userId}`)
   }
 }
