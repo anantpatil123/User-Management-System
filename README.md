@@ -1,3 +1,11 @@
+
+
+For testing locally I used chrome browser and disabled cors (security )  
+You can refer https://alfilatov.com/posts/run-chrome-without-cors/ 
+Below Command is used from cmd to use temp broser to test code locally [It is not recommended for Production environment ]
+
+C:\Program Files\Google\Chrome\Application\chrome.exe --disable-web-security --disable-gpu --user-data-dir=%LOCALAPPDATA%\Google\chromeTemp
+
 # UserManagementSystem
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.

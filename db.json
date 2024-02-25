@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "firstName": "Anant",
+      "lastName": "Patil",
+      "address": "Baner,Pune 411045",
+      "email": "ant41107@gmail.com",
+      "phoneNumber": 7020327030,
+      "id": "1"
+    },
+    {
+      "firstName": "Amrendra",
+      "lastName": "Patil",
+      "address": "Sangl",
+      "email": "amit@gmail.com",
+      "phoneNumber": 7878787878,
+      "id": "6595"
+    },
+    {
+      "firstName": "Amrendra",
+      "lastName": "Patil",
+      "address": "Satara",
+      "email": "amit@gmail.com",
+      "phoneNumber": 6523698562,
+      "id": "7e23"
+    },
+    {
+      "id": "4b68",
+      "firstName": "anant",
+      "lastName": "Patil",
+      "address": "ant@41107@gmail.com",
+      "email": "ant41107@gmail.com",
+      "phoneNumber": 7896541236
+    },
+    {
+      "id": "74b8",
+      "firstName": "Amit",
+      "lastName": "cqwe",
+      "address": "panvel",
+      "email": "amit@gmail.com",
+      "phoneNumber": 6589478569
+    },
+    {
+      "firstName": "Amit",
+      "lastName": "Chavan",
+      "address": "Chavan vada 1",
+      "email": "cvada@gmail.com",
+      "phoneNumber": 6589632569,
+      "id": "22ef"
+    }
+  ]
+}

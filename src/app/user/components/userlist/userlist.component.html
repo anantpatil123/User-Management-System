@@ -1,0 +1,23 @@
+<div> <span class="header">User List</span>
+  <span class="create-btn"> <p-button label="Create User" routerLink="/user-upcert/create" [rounded]="true"></p-button>
+  </span>
+</div>
+
+<div class="grid-container">
+  @for(user of userList ;; track user.id){
+  <div class="grid-item">
+    <h3>{{ user.firstName }} {{ user.lastName }}</h3>
+    <h3> <span class="icon-container"> <i class="fa-solid fa-envelope"></i></span>{{ user.email }}</h3>
+    <h3> <span class="icon-container"><i class="fa-solid fa-location-dot"></i> </span>{{ user.address}}</h3>
+    <h3> <span class="icon-container"><i class="fa-solid fa-phone"></i></span> {{ user.phoneNumber}}</h3>
+    <div class="btn-container">
+      <p-button [rounded]="true" [text]="true" (click)="deleteUser(user.id)"> <i
+          class="fa-solid fa-trash"></i></p-button>
+      <p-button [rounded]="true" [text]="true" routerLink="/user-upcert/{{user.id}}"><i class="fa-solid fa-pen">
+        </i></p-button>
+    </div>
+  </div>
+  }@empty{
+  Empty list of users
+  }
+</div>

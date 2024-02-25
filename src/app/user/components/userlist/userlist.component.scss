@@ -1,0 +1,33 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .grid-item {
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    background-color: #e3d8d8;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .btn-container{
+    display:flex;
+    justify-content: space-between;}
+
+  .icon-container{
+    margin:0px 10px;
+  }
+
+  .create-btn{
+    justify-content: end;
+    display: flex;
+    margin:20px
+  }
+
+ ::ng-deep .p-button.p-button-text {
+    background-color: transparent;
+    color: #313131;
+    border-color: #f3e5e5;
+}

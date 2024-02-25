@@ -1,0 +1,28 @@
+.form-field {
+  margin: 20px auto;
+}
+
+::ng-deep .p-button.p-button-rounded {
+  border-radius: 25px;
+  width: 100%;
+  justify-content: center;
+}
+
+.p-inputtext {
+  margin: 10px 0px;
+  margin: 10px 0px;
+  width: 100%;
+  border-radius: 25px;
+}
+
+.page-container {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.form-container {
+  margin: auto;
+  width: 20%;
+  padding: 10px;
+}
