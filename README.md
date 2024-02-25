@@ -15,7 +15,7 @@ Run the following command to start the JSON server, which serves as a mock backe
 4. Temporarily Disable CORS in Chrome (Optional, for Local Testing):
 For local testing purposes, you may choose to temporarily disable CORS in the Chrome browser. Refer to the documentation below or online resources for instructions on how to disable CORS in your Chrome browser instance.
 
-5 Start the Application:
+5. Start the Application:
 Launch the Angular application by running the following command in the project directory: ng serve
 This command compiles the application and starts a development server. Once the compilation is complete, you can access the application by navigating to http://localhost:4200 in your web browser.
 
