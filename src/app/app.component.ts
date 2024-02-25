@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { UsersPageModule } from './pages/users-page/users-page.module';
 import { HttpClientModule } from '@angular/common/http';
+import { UsersPageComponent } from "./user/pages/users-page/users-page.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet,UsersPageModule,HttpClientModule ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss',
+    imports: [CommonModule,
+        RouterOutlet,
+        HttpClientModule, UsersPageComponent]
 })
 export class AppComponent {
   title = 'user-management-system';

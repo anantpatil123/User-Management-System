@@ -1,0 +1,29 @@
+<div class="page-container">
+  <div class="form-container">
+    <div class="header"> Create User</div>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="form-field">
+        <label for="firstName">First Name</label>
+        <div> <input type="text" pInputText class="p-inputtext-lg" id="firstName" formControlName="firstName" /></div>
+      </div>
+      <div class="form-field">
+        <label for="lastName">Last Name</label>
+        <div> <input type="text" pInputText class="p-inputtext-lg" id="lastName" formControlName="lastName" /></div>
+      </div>
+      <div class="form-field">
+        <label for="address">Address</label>
+        <div> <input type="text" pInputText class="p-inputtext-lg" id="address" formControlName="address" /></div>
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <div> <input type="email" pInputText class="p-inputtext-lg" id="email" formControlName="email" /></div>
+      </div>
+      <div class="form-field">
+        <label for="phoneNumber">Phone Number</label>
+        <div> <input type="number" pInputText class="p-inputtext-lg" id="phoneNumber" formControlName="phoneNumber" />
+        </div>
+      </div>
+      <p-button label="" [rounded]="true" type="submit">Submit</p-button>
+    </form>
+  </div>
+</div>

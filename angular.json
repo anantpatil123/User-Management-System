@@ -32,7 +32,7 @@
             "styles": [
               "src/styles.scss",
               "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-    "node_modules/primeng/resources/primeng.min.css"
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
           },
@@ -67,7 +67,8 @@
               "buildTarget": "user-management-system:build:production"
             },
             "development": {
-              "buildTarget": "user-management-system:build:development"
+              "buildTarget": "user-management-system:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

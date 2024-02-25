@@ -5,8 +5,9 @@ import { User } from '../interfaces/user';
 @Injectable({
   providedIn: 'root'
 })
+
 export class UserService {
-  constructor(private http:HttpClient) { }
+  constructor( private http:  HttpClient ) { }
 
   createUser(userData:User){
    return this.http.post<User>('localhost:3000/users',userData);
